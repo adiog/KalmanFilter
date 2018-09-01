@@ -16,7 +16,7 @@ KalmanImpl::KalmanImpl() {
 };
 
 // The angle should be in degrees and the rate should be in degrees per second and the delta time in seconds
-Float KalmanImpl::getAngle(Float newAngle, Float newRate, Float dt) {
+KalmanImpl::Float KalmanImpl::getAngle(Float newAngle, Float newRate, Float dt) {
     // KasBot V2  -  Kalman filter module - http://www.x-firm.com/?page_id=145
     // Modified by Kristian Lauszus
     // See my blog post for more information: http://blog.tkjelectronics.dk/2012/09/a-practical-approach-to-kalman-filter-and-how-to-implement-it
@@ -64,13 +64,13 @@ Float KalmanImpl::getAngle(Float newAngle, Float newRate, Float dt) {
 };
 
 void KalmanImpl::setAngle(Float angle) { this->angle = angle; }; // Used to set angle, this should be set as the starting angle
-Float KalmanImpl::getRate() { return this->rate; }; // Return the unbiased rate
+KalmanImpl::Float KalmanImpl::getRate() { return this->rate; }; // Return the unbiased rate
 
 /* These are used to tune the Kalman filter */
 void KalmanImpl::setQangle(Float Q_angle) { this->Q_angle = Q_angle; };
 void KalmanImpl::setQbias(Float Q_bias) { this->Q_bias = Q_bias; };
 void KalmanImpl::setRmeasure(Float R_measure) { this->R_measure = R_measure; };
 
-Float KalmanImpl::getQangle() { return this->Q_angle; };
-Float KalmanImpl::getQbias() { return this->Q_bias; };
-Float KalmanImpl::getRmeasure() { return this->R_measure; };
+KalmanImpl::Float KalmanImpl::getQangle() { return this->Q_angle; };
+KalmanImpl::Float KalmanImpl::getQbias() { return this->Q_bias; };
+KalmanImpl::Float KalmanImpl::getRmeasure() { return this->R_measure; };

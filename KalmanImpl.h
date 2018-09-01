@@ -1,9 +1,12 @@
+#pragma once
+
 #include <SensorFusion.h>
 
 class KalmanImpl
 {
 public:
     using Float = sensorFusion::SensorFusion::Float;
+
     KalmanImpl();
 
     // The angle should be in degrees and the rate should be in degrees per second and the delta time in seconds
@@ -39,5 +42,3 @@ private:
 
     Float P[2][2];  // Error covariance matrix - This is a 2x2 matrix
 };
-
-#endif
