@@ -51,7 +51,7 @@ struct Kalman : public SensorFusion
         }
         kalAngleY = kalmanY.getAngle(pitch, gyroYrate, dt);
 
-        return FusionData{{kalAngleX, kalAngleY, 0}};
+        return FusionData{{kalAngleX, kalAngleY, 0, 0}};
     }
 
 private:
